@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/todos")
 public class TodoController {
@@ -14,7 +16,7 @@ public class TodoController {
     public TodoService todoService;
 
     @GetMapping
-    public  List<Todo> getAllTodos()
+    public List<Todo> getAllTodos()
     {
         return todoService.getAllTodo();
     }
